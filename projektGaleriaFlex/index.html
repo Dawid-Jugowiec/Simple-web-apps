@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Galeria Flexbox</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+  body {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+  }
+
+  h1 {
+   flex-basis: 10vh;
+   text-align: center;
+   line-height: 10vh;
+   background-color: #000;
+   color: white;
+   font-family: sans-serif;
+  }
+
+  section {
+   /* jako element elastaczny */
+   flex-grow: 1;
+   /* kontener flex */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-content: space-around;
+  }
+
+  section>div {
+   flex-basis: 21%;
+  }
+
+  section div img {
+   width: 100%;
+  }
+
+  @media (max-width: 1200px) {
+   section>div {
+    flex-basis: 50%;
+    padding: 50px;
+   }
+  }
+
+  @media (max-width: 1024px) {
+   section>div {
+    padding: 30px;
+   }
+  }
+
+  @media (max-width: 640px) {
+   section>div {
+    padding: 15px;
+   }
+  }
+
+  @media (max-width: 460px) {
+   section>div {
+    flex-basis: 100%;
+   }
+  }
+ </style>
+</head>
+
+<body>
+ <h1>GALERIA</h1>
+ <section>
+  <div>
+   <img src="img1.jpg" alt="">
+  </div>
+  <div>
+   <img src="img2.jpg" alt="">
+  </div>
+  <div>
+   <img src="img3.jpg" alt="">
+  </div>
+  <div>
+   <img src="img4.jpg" alt="">
+  </div>
+
+  <div>
+   <img src="img1.jpg" alt="">
+  </div>
+  <div>
+   <img src="img2.jpg" alt="">
+  </div>
+  <div>
+   <img src="img3.jpg" alt="">
+  </div>
+  <div>
+   <img src="img4.jpg" alt="">
+  </div>
+ </section>
+</body>
+
+</html>

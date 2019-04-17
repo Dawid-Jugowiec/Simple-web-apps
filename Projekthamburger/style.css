@@ -1,0 +1,48 @@
+body {
+    height: 150vh;
+    --menuHeight: -270px;
+    --menuHeight2: 0;
+}
+
+.wrapper {
+
+    margin: 10px 10px;
+}
+
+.burger {
+    color: red;
+    position: fixed;
+    bottom: calc(var(--menuHeight) + 320px);
+    right: 10vw;
+    font-size: 40px;
+    border: 10px solid red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+
+div.on {
+    /* bottom: calc(var(--menuHeight2)); */
+    bottom: 320px;
+    transform: rotate(180deg);
+}
+
+.menu {
+
+    position: fixed;
+    background-color: black;
+    height: 300px;
+    width: 100%;
+    bottom: var(--menuHeight);
+    transition: 0.5s;
+}
+
+
+aside.on {
+
+    bottom: var(--menuHeight2);
+}
